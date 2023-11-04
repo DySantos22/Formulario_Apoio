@@ -1,15 +1,14 @@
 <?php
-    try {
-        $host = "localhost"; //localhost, ip ou host
-        $dbname = "form_"; //nome do banco de dados
-        $root = "nomedousuario"; //usuario
-        $password = "senha"; //senha de conexao
+// Parâmetros para criar a conexão
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "form_dados";
 
-        $pdo = new PDO ("mysql:host=$host;dbname=$dbname","$root","$password");
-
-    } catch (PDOException $e) {
-	    echo "Erro de Conexão " . $e->getMessage() . "\n";
-	    exit;
+// Criando a conexão
+if( $conn = mysqli_connect($servername, $username, $password, $dbname)){
+    echo "Conexão realizada com sucesso!";
+}else{
+    echo "Erro na conexão: ".mysqli_error();
 }
-
 ?>
