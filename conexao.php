@@ -1,13 +1,13 @@
 <?php
 // Parâmetros para criar a conexão
-$servername = "localhost";
-$username = "root";
+$servername = "";
+$username = "";
 $password = "";
-$dbname = "form_dados";
+$dbname = "";
 
 // Criando a conexão
 if( $conn = mysqli_connect($servername, $username, $password, $dbname)){
-    echo "Conexão realizada com sucesso!";
+    echo'';
 }else{
     echo "Erro na conexão: ".mysqli_error();
 }
