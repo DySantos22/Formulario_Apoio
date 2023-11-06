@@ -43,3 +43,27 @@ function checkChar(f){
     }
 
 }
+
+const block3 = document.querySelector("#indicacao");
+
+block3.addEventListener("keypress", function(g){
+
+    if(!checkChar(g)){
+        g.preventDefault();
+    }
+
+
+});
+
+function checkChar(g){
+
+    const char3 = String.fromCharCode(g.keyCode);
+
+    const pattern3 = '[a-zA-ZãÃ´`áàÁÀúõÂâôÔíÍÊêç ]';
+
+    if(char3.match(pattern3)){
+        return true;
+    }
+
+}
+
