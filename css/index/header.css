@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.cadastro-contrato{
+    display: flex;
+    justify-content: center;
+    flex-direction: row !important;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    gap: 20px;
+    align-items: center;
+}
+h2{
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    align-items: start;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+#img_principal{
+    width: 150px;
+    height: 150px;
+}
