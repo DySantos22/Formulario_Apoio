@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: linear-gradient(to left top, #051937, #003f64, #006989, #0096a0, #00c2a8);    font-family: 'Libre Baskerville', serif !important;
+
+}
