@@ -48,15 +48,15 @@ try {
     $mail->addAddress($email);     //Email do Destinatario
     $mail->isHTML(true);                                  //Habilitando o uso do HTML
     $mail->charset = 'UTF-8';
-    $mail->Subject = 'Definir uma Senha';    //Titulo
-    $mail->Body    = "Olá, seja bem vindo!!<br><br>Obrigado pelo seu apoio!!<br><br>Clique no link abaixo para  cadastrar sua senha:<br><br>
-    <a href='http://localhost/editpassword.php?email=$email' target='_blank'>Clique Aqui!</a>";   //Corpo
-    $mail->AltBody = "Olá, seja bem vindo!!\n\nObrigado pelo seu apoio!!\n\nClique no link abaixo para cadastrar sua senha:\n\n
-    <a href='http://localhost/editpassword.php?email=$email' target='_blank'>Clique Aqui!</a>";
+    $mail->Subject = 'Confirmar Email';    //Titulo
+    $mail->Body    = "Olá, seja bem vindo!!<br><br>Obrigado pelo seu apoio!!<br><br>Clique no link abaixo para confirmar seu e-mail:<br><br>
+    <a href='http://localhost/confirmation.php?chave=$chave' target='_blank'>Clique Aqui!</a>";   //Corpo
+    $mail->AltBody = "Olá, seja bem vindo!!\n\nObrigado pelo seu apoio!!\n\nClique no link abaixo para confirmar seu e-mail:\n\n
+    <a href='http://localhost/confirmation.php?chave=$chave' target='_blank'>Clique Aqui!</a>";
   
     //Verificando envio do email
     if($mail->send()) {
-        header('refresh:4;url=index.html');
+        header('location: index.html');
     } else {
         header('location: index.html');
         }
@@ -79,6 +79,6 @@ mysqli_close($conn);
 </head>
 <body>
 <script src="js/sweetalert2.js"></script>
-<script src="js/custom.js"></script>
+<script src="js/custom4.js"></script>
 </body>
 </html>
