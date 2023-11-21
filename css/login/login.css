@@ -8,3 +8,7 @@ body{
     background-image: linear-gradient(to left top, #051937, #003f64, #006989, #0096a0, #00c2a8);    font-family: 'Libre Baskerville', serif !important;
 
 }
+
+.form_modal{
+    font-family:Arial, Helvetica, sans-serif;
+}
