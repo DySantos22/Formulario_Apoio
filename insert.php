@@ -36,7 +36,7 @@ $row = $result->fetch_assoc();
 
 //Fazendo a verificacao, caso já exista o email
 if($result->num_rows > 0){
-   include 'erroremail.html';
+   include 'boxes/erroremail.html';
    header('refresh:3;url=index.html');
 }else{
 
