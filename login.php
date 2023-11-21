@@ -26,7 +26,7 @@ if ($result->num_rows > 0 || $result2->num_rows>0){
 		
     //Ele impede o acesso de apoiadores que estao inativos
     if($row2['Email'] == $campoemail AND $row2['Estado'] == 'Inativo' ){
-        include('errorvalidacao_login.html');
+        include('boxes/errorvalidacao_login.html');
         header('refresh:2; url=login.html');
     }else{
         //Verificacao da senha do ADM
