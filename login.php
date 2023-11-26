@@ -10,7 +10,7 @@ $camposenha = $_POST["senha"];
 require 'conexao.php';
 
 //Cria o SQL (consulte tudo na tabela usuarios com o email digitado no form)
-$sql = "SELECT * FROM usuario WHERE Email='$campoemail' AND Acesso='Admin'";
+$sql = "SELECT * FROM usuario WHERE Email='$campoemail' AND Acesso='Mestre'";
 $sql2 = "SELECT * FROM usuario WHERE Email='$campoemail' AND Acesso='Apoiador'";
 
 //Executa o SQL
@@ -31,11 +31,11 @@ if ($result->num_rows > 0 || $result2->num_rows>0){
     }else{
         //Verificacao da senha do ADM
         if(password_verify($camposenha, $row['Senha'])){
-            header('location: principaladm.html');
+            header('location: principal.html');
         }
         //Verificacao da senha do usuario
         else if(password_verify($camposenha, $row2['Senha'])){
-            header('location: principalapoiador.html');
+            header('location: apoiador/principalapoiador.html');
         }else{
             //Caso os dados estejam errados
             echo "<script language=javascript>alert('Email ou senha Incorretos!');window.location='login.html';</script>";

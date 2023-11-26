@@ -30,8 +30,8 @@ try {
     $mail->SMTPSecure = 'tls';                                  //Enviar usando TLS
     $mail->Host       = 'smtp.gmail.com';                     //Servidor usado
     $mail->SMTPAuth   = true;                                   //Ativando autenticacao SMTP
-    $mail->Username   = '';                     //Usuario SMTP
-    $mail->Password   = '';                        //Senha SMTP     
+    $mail->Username   = 'dyllanlima17@gmail.com';                     //Usuario SMTP
+    $mail->Password   = 'dvjz wisa bcdx xoax';                        //Senha SMTP     
     $mail->Port       = 587;        //Porta usada para TLS
 
     //Aqui ele tira o erro do SSL e da conexão com o Host
@@ -44,7 +44,7 @@ try {
     );
     
     //quem envia e recebe
-    $mail->setFrom('', '');  //Usuario SMTP e Nome aleatório
+    $mail->setFrom('dyllanlima17@gmail.com', 'Dyllan Lima');  //Usuario SMTP e Nome aleatório
     $mail->addAddress($email);     //Email do Destinatario
     $mail->isHTML(true);                                  //Habilitando o uso do HTML
     $mail->charset = 'UTF-8';
