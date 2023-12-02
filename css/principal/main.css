@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #f7f5f5;
+}
+ /* Botoes */
+.div_buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 2rem;
+}
+
+.button_links{
+    height: 5rem;
+    width: 100%;
+    border:none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin-top:1rem;
+    border-radius: 5px;
+}
+
+#button1{
+    background-color:#0097e6;
+}
+#button2{
+    background-color:#4cd137;
+}
+#button3{
+    background-color: #273c75;
+}
+#button4{
+    background-color: #7f8fa6;
+}
+
+.imgs-icons{
+    margin-right: 1rem;
+    
+}
+
+/* Formulario de pesquisa */
+.div-formulario{
+    margin-top: 3rem;
+    background-color:#f3f0f0cb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        box-shadow: 2px 2px 2px 1px rgba(27, 27, 27, 0.3);
+    border-radius: 5px;
+}
+
+.form{
+    width: 85%;
+}
+
+.barra-pesquisa{
+    margin-top: 1rem;
+}
+
+.informacoes{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Tirando focus input */
+input:focus {
+    box-shadow: 0 0 0 0 !important; /* hide shadow */
+    outline: 0 !important; /* hide outline */
+    border: 1px solid gray !important; /* set border color */
+}
