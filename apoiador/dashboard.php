@@ -4,11 +4,13 @@
     require '../conexao.php';
 
     //Pegando quantidade de Apoiadores
-    $sql = "SELECT COUNT(*) as ID FROM usuario WHERE Acesso = 'Apoiador'";$resultado = mysqli_query($conn, $sql);
+    $sql = "SELECT COUNT(*) as ID FROM usuario WHERE Acesso = 'Apoiador'";
+    $resultado = mysqli_query($conn, $sql);
     $row = $resultado->fetch_assoc();
 
     //Pegando quantidade de líderes
-    $sql2 = "SELECT COUNT(*) as ID_Mestre FROM usuario WHERE Acesso = 'Mestre'";$resultado2 = mysqli_query($conn, $sql2);
+    $sql2 = "SELECT COUNT(*) as ID_Mestre FROM usuario WHERE Acesso = 'Mestre'";
+    $resultado2 = mysqli_query($conn, $sql2);
     $row2 = $resultado2->fetch_assoc();
 
     //Pegando quantos usuarios informaram local de votacao

@@ -14,7 +14,7 @@ $sql2 = "UPDATE usuario SET Estado='Ativo' WHERE Estado='Inativo' AND Chave='$ch
 
 //Executa o sql e faz tratamento de erro.
 if ($conn->query($sql2) === TRUE) {
-  include 'confirmemail.html';
+  include 'boxes/confirmemail.html';
   header('refresh:5;url=login.html');
 } else {
   echo "Erro: " . $conn->error;

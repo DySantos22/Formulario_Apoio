@@ -29,7 +29,7 @@ $result = $conn->query($sql);
 
 //Se conectou com sucesso
 if($conn->query($sql) === TRUE){
-    include 'sucesseditpassword.html';
+    include 'boxes/sucesseditpassword.html';
     header('refresh:4;url=sendemail2.php');
 }else{
     //Se deu erro na aplicação
