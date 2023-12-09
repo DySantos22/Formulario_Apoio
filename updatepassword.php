@@ -20,6 +20,15 @@ $sql2 = "SELECT * FROM usuario WHERE Email='$email'";
 $result2 = $conn->query($sql2);
 $row2 = $result2->fetch_assoc();
 
+//Pegando ID na tabela usuario
+$ID_usuario = $row2['ID'];
+$nome = $row2['Nome'];
+
+//Inserindo o ID da tabela usuario no ID_usuario na tabela Contato
+$sql3 = "INSERT INTO contato (ID_usuario, Nome) VALUES ('$ID_usuario', '$nome')";
+$result3 = $conn->query($sql3);
+$row3 = $result2->fetch_assoc();
+
 //Colocando informações na SESSION
 $_SESSION['email'] = $email;
 $_SESSION['chave'] = $row2['Chave'];

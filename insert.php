@@ -16,6 +16,7 @@ $local_votacao = $_POST["local"];
 $estado = "Inativo";
 $acesso = "Apoiador";
 $_SESSION['email'] = $email;
+$cadastro = date('d/m/Y');
 
 //Senha criptografada
 $senha = password_hash("!mudar123", PASSWORD_DEFAULT);
@@ -43,7 +44,7 @@ if($result->num_rows > 0){
 
 //Fazendo inserção dos usuario
 
-$sql2 = "INSERT INTO usuario (Indicacao, Nome, Senha, Apelido, Whatsapp, Email, Data_de_Nascimento, Endereco_Local_Votacao, Chave, Estado, Acesso) VALUES ('$indicacao', '$nome', '$senha', '$apelido', '$whatsapp', '$email', '$data', '$local_votacao', '$chave', '$estado', '$acesso')";
+$sql2 = "INSERT INTO usuario (Indicacao, Nome, Senha, Apelido, Whatsapp, Email, Data_de_Nascimento, Endereco_Local_Votacao, Cadastro, Chave, Estado, Acesso) VALUES ('$indicacao', '$nome', '$senha', '$apelido', '$whatsapp', '$email', '$data', '$local_votacao', '$cadastro', '$chave', '$estado', '$acesso')";
 
 //Se a conexão e a inserção foram feitas, vai para sendemail.php
 if($conn->query($sql2) === TRUE){

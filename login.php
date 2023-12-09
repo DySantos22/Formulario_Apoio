@@ -31,7 +31,8 @@ if ($result->num_rows > 0 || $result2->num_rows>0){
     }else{
         //Verificacao da senha do ADM
         if(password_verify($camposenha, $row['Senha'])){
-            header('location: principal.html');
+            header('location: mestre/principalmestre.php');
+            $_SESSION['Acesso'] = $row['Acesso'];
         }
         //Verificacao da senha do usuario
         else if(password_verify($camposenha, $row2['Senha'])){
