@@ -16,7 +16,7 @@ $local_votacao = $_POST["local"];
 $estado = "Inativo";
 $acesso = "Apoiador";
 $_SESSION['email'] = $email;
-$cadastro = date('d/m/Y');
+$cadastro = date('Y-m-d');
 
 //Senha criptografada
 $senha = password_hash("!mudar123", PASSWORD_DEFAULT);
@@ -38,7 +38,7 @@ $row = $result->fetch_assoc();
 //Fazendo a verificacao, caso já exista o email
 if($result->num_rows > 0){
    include 'boxes/erroremail.html';
-   header('refresh:3;url=index.html');
+   header('refresh:3;url=index.php');
 }else{
 
 
