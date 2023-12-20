@@ -7,7 +7,7 @@ if($_SESSION['Acesso'] == 'Mestre'){
     require '../conexao.php';
 
     //Pegando quantidade de Apoiadores
-    $sql = "SELECT COUNT(*) as ID FROM contato INNER JOIN usuario WHERE contato.ID_usuario = usuario.ID";
+    $sql = "SELECT COUNT(*) as ID FROM contato INNER JOIN usuario WHERE contato.ID_usuario = usuario.ID AND Acesso='Apoiador'";
     $resultado = mysqli_query($conn, $sql);
     $row = $resultado->fetch_assoc();
 
@@ -72,12 +72,12 @@ if($_SESSION['Acesso'] == 'Mestre'){
 </head>
 
 <body>
-    <header>
+<header>
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-white bg-white static-top">
-            <div class="container">
-                <a class="navbar-brand" href="principalmestre.php">
-                    <img src="https://placeholder.pics/svg/150x50/888888/EEE/Logo" alt="Home" height="36">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#" id="logo">
+                    LOGO
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -85,9 +85,9 @@ if($_SESSION['Acesso'] == 'Mestre'){
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto me-5">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="principalmestre.php">Home</a>
+                        <a class="nav-link" aria-current="page" href="principalmestre.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="contatos.php">Contatos</a>
@@ -103,15 +103,13 @@ if($_SESSION['Acesso'] == 'Mestre'){
             </div>
         </nav>
     </header>
-
     <main>
         <!-- Cards informativos -->
         <div class="container">
             <div class="row div-informacoes">
                 <div class="col informacoes d-flex align-items-center" id="card1">
                     <div class="imagem-icon m-4">
-                        <img width="50" height="50" src="https://img.icons8.com/ios/50/user-group-man-man.png"
-                            alt="user-group-man-man" />
+                    <img width="50" height="50" src="https://img.icons8.com/ios/50/FFFFFF/conference-call--v1.png" alt="Cadastrados"/>
                     </div>
                     <div>
                         <h5 class="texto">Contatos</h5>
@@ -120,8 +118,7 @@ if($_SESSION['Acesso'] == 'Mestre'){
                 </div>
                 <div class="col informacoes d-flex align-items-center" id="card2">
                     <div class="imagem-icon m-4">
-                        <img width="50" height="50" src="https://img.icons8.com/ios/50/admin-settings-male.png"
-                            alt="admin-settings-male" />
+                    <img width="50" height="50" src="https://img.icons8.com/ios/50/FFFFFF/admin-settings-male.png" alt="Liderança"/>
                     </div>
                     <div>
                         <h5 class="texto">Lideranças</h5>
@@ -133,8 +130,7 @@ if($_SESSION['Acesso'] == 'Mestre'){
             <div class="row div-informacoes mt-4">
                 <div class="col informacoes d-flex align-items-center" id="card3">
                     <div class="imagem-icon m-4">
-                        <img width="50" height="50" src="https://img.icons8.com/ios/50/map-marker--v1.png"
-                            alt="map-marker--v1" />
+                    <img width="50" height="50" src="https://img.icons8.com/ios/50/FFFFFF/marker--v1.png" alt="Endereço informado"/>
                     </div>
                     <div>
                         <h5 class="texto">Sem Local</h5>
@@ -181,6 +177,6 @@ if($_SESSION['Acesso'] == 'Mestre'){
 
 <?php
 }else{
-    header("Location: ../index.html");
+    header("Location: ../index.php");
 }
 ?>
