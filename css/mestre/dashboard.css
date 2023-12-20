@@ -7,6 +7,10 @@ body {
     background-color: #f7f5f5;
 }
 
+#logo{
+    margin: 0 2rem;
+}
+
 .container {
     width: 100%;
 
@@ -17,6 +21,7 @@ body {
     align-items: center;
     gap: 20px;
     margin-top: 2rem;
+    
 }
 
 .informacoes{
@@ -25,24 +30,33 @@ body {
 
 .texto {
     margin-top: -0.2rem;
+    color: #fff !important;
+    font-family: 'Merriweather', serif;
 }
 
 #card1 {
     width: 100%;
     height: 5rem;
-    background-color: #0097e6;
+    background-color:#5C5C5C;
+    box-shadow: 2px 2px 2px 1px rgba(27, 27, 27, 0.3);
+    border-radius: 5px;
 }
 
 #card2 {
     width: 100%;
     height: 5rem;
-    background-color: #4cd137;
+    background-color: #5C5C5C;
+    box-shadow: 2px 2px 2px 1px rgba(27, 27, 27, 0.3);
+    border-radius: 5px;
 }
 
 #card3 {
     width: 100%;
     height: 5rem;
-    background-color: #7f8fa6;
+    background-color: #5C5C5C;
     margin-left: 0rem !important;
     margin-top: -0rem;
+    box-shadow: 2px 2px 2px 1px rgba(27, 27, 27, 0.3);
+    border-radius: 5px;
 }
+

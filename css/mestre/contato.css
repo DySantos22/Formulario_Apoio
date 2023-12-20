@@ -13,6 +13,10 @@ body {
 
 }
 
+#logo{
+    margin: 0 2rem;
+}
+
 .div-informacoes {
     display: flex;
     align-items: center;
@@ -22,26 +26,34 @@ body {
 
 .informacoes{
     border-radius: 5px;
+    color: #fff !important;
+    font-family: 'Merriweather', serif;
 }
 
 #card1 {
     width: 100%;
     height: 5rem;
-    background-color: #0097e6;
+    background-color: #5C5C5C;
+    box-shadow: 2px 2px 2px 1px rgba(27, 27, 27, 0.3);
+    border-radius: 5px;
 }
 
 #card2 {
     width: 100%;
     height: 5rem;
-    background-color: #4cd137;
+    background-color: #5C5C5C;
+    box-shadow: 2px 2px 2px 1px rgba(27, 27, 27, 0.3);
+    border-radius: 5px;
 }
 
 #card3 {
     width: 100%;
     height: 5rem;
-    background-color: #7f8fa6;
+    background-color: #5C5C5C;
     margin-left: 0rem !important;
     margin-top: -0rem;
+    box-shadow: 2px 2px 2px 1px rgba(27, 27, 27, 0.3);
+    border-radius: 5px;
 }
 
 .content{
@@ -98,8 +110,9 @@ body {
 }
 
 #listar thead th {
-    background-color: #eeeaea;
-    color: #000;
+    background-color: #404040;
+    color: #fff;
+    
 }
 
 #listar tbody tr:nth-child(even) {
