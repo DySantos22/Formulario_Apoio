@@ -3,6 +3,12 @@ session_start();
 
 if($_SESSION['Acesso'] == 'Mestre'){
 
+    //Pegando nome
+    $nome = $_SESSION['Nome'];
+
+    //Incluindo composer
+    include_once('../lib/vendor/autoload.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -19,10 +25,10 @@ if($_SESSION['Acesso'] == 'Mestre'){
 <body>
     <header>
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-white bg-white static-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="https://placeholder.pics/svg/150x50/888888/EEE/Logo" alt="..." height="36">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#" id="logo">
+                    LOGO
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -30,9 +36,9 @@ if($_SESSION['Acesso'] == 'Mestre'){
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto me-5">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="principalmestre.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contatos.php">Contatos</a>
@@ -52,23 +58,26 @@ if($_SESSION['Acesso'] == 'Mestre'){
         <div class="container">
             <div class="row div_buttons">
                 <div class="col button"><a href="contatos.php">
-                    <button class="button_links" id="button1"><img width="45" height="45" class="imgs-icons"
-                            src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/external-contacts-twitter-flatart-icons-outline-flatarticons.png"
-                            alt="Novo Contato" />Contato</button></a>
+                        <button class="button_links" id="button1"><img class="imgs-icons"
+                                src="https://img.icons8.com/ios/50/FFFFFF/user-group-man-man.png"
+                                alt="Novos Contatos" />Contatos</button></a>
                 </div>
                 <div class="col button">
-                    <button class="button_links" id="button2"><img width="35" height="35" class="imgs-icons"
-                            src="https://img.icons8.com/ios/50/1A1A1A/add-to-chat.png" alt="Novo Atendimento" />Atendimento</button>
+                    <button class="button_links" id="button2" data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                            class="imgs-icons"
+                            src="https://img.icons8.com/ios/50/FFFFFF/speech-bubble-with-dots--v1.png"
+                            alt="Atendimento" />Suporte</button>
                 </div>
                 <div class="w-100"></div>
                 <div class="col button"><a href="dashboard.php">
-                    <button class="button_links" id="button3"><img width="35" height="35"
-                        class="imgs-icons"
-                            src="https://img.icons8.com/ios/50/1A1A1A/combo-chart--v1.png"
-                            alt="Dashboard" />DashBoard</button></a>
+                        <button class="button_links" id="button3"><img class="imgs-icons"
+                                src="https://img.icons8.com/ios/50/FFFFFF/performance-macbook.png"
+                                alt="Dashboard" />DashBoard</button></a>
                 </div>
                 <div class="col button">
-                    <button class="button_links" id="button4">Novo Teste</button>
+                    <button class="button_links" id="button4" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal2"><img class="imgs-icons"
+                            src="https://img.icons8.com/ios/50/FFFFFF/share--v1.png" alt="Convite" />Convite</button>
                 </div>
             </div>
 
@@ -84,10 +93,10 @@ if($_SESSION['Acesso'] == 'Mestre'){
                             </div>
 
                             <div class="informacoes">
-                                <div class="paragrafo">
+                                <div class="paragrafo text-center">
                                     <h5>Não há nenhum contato selecionado!</h5>
                                 </div>
-                                <div class="subtitulo">
+                                <div class="subtitulo text-center">
                                     <h6>Por favor, pesquise por um contato acima e selecione para ver seu resumo.</h6>
                                 </div>
                             </div>
@@ -97,6 +106,65 @@ if($_SESSION['Acesso'] == 'Mestre'){
 
                 </div>
 
+            </div>
+        </div>
+
+        <!-- Modal Suporte -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Contatos para Suporte</h1>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="recipient-email" class="col-form-label">Email:</label>
+                            <input type="email" name="email" class="form-control" id="recipient-email" disabled
+                                value="suporte@gmail.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-tel" class="col-form-label">Telefone:</label>
+                            <input type="tel" name="tel" class="form-control" id="recipient-tel" disabled
+                                value="(21)11111-1111">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Convite -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Convide novas Pessoas!</h1>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="recipient-link" class="col-form-label">Link:</label>
+                            <input type="text" name="text" class="form-control" id="recipient-link" disabled
+                                value="http://localhost/?i=<?php echo $nome;?>">
+                        </div>
+                        <div class="mb-3">
+                            <h6 class="text-center">Ou use o QRCode abaixo! </h6>
+                        </div>
+                        <div class="mb-3">
+                            <div class="div-qr text-center">
+                                <?php
+                                //Gerando QRCode da dependencia Chillerlan/QRCode
+                                 $qrcode = (new \chillerlan\QRCode\QRCode())->render("localhost/i?'$nome'");
+                                 echo "<img src='$qrcode'>";
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -116,6 +184,6 @@ if($_SESSION['Acesso'] == 'Mestre'){
 
 <?php
 }else{
-    header("Location: ../index.html");
+    header("Location: ../index.php");
 }
 ?>
