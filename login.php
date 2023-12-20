@@ -33,6 +33,7 @@ if ($result->num_rows > 0 || $result2->num_rows>0){
         if(password_verify($camposenha, $row['Senha'])){
             header('location: mestre/principalmestre.php');
             $_SESSION['Acesso'] = $row['Acesso'];
+            $_SESSION['Nome'] = $row['Nome'];
         }
         //Verificacao da senha do usuario
         else if(password_verify($camposenha, $row2['Senha'])){
