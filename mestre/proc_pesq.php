@@ -21,12 +21,12 @@ $columns = array(
 );
 
 //Obtendo registros de número total sem qualquer pesquisa
-$result_user = "SELECT Cadastro, Nome, Email, Apelido, Indicacao, Whatsapp, Endereco_Local_Votacao, Estado FROM usuario";
+$result_user = "SELECT Cadastro, Nome, Email, Apelido, Indicacao, Whatsapp, Endereco_Local_Votacao, Estado FROM usuario WHERE Acesso='Apoiador'";
 $resultado_user =mysqli_query($conn, $result_user);
 $qnt_linhas = mysqli_num_rows($resultado_user);
 
 //Obter os dados a serem apresentados
-$result_usuarios = "SELECT Cadastro, Nome, Email, Apelido, Indicacao, Whatsapp, Endereco_Local_Votacao, Estado FROM usuario WHERE 1=1";
+$result_usuarios = "SELECT Cadastro, Nome, Email, Apelido, Indicacao, Whatsapp, Endereco_Local_Votacao, Estado FROM usuario WHERE 1=1 AND Acesso='Apoiador'";
 if( !empty($requestData['search']['value']) ) {
     $result_usuarios .= " AND ( 
         Cadastro LIKE '".$requestData['search']['value']."%' 
