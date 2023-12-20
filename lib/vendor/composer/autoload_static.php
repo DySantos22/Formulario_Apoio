@@ -7,6 +7,11 @@ namespace Composer\Autoload;
 class ComposerStaticInit7ef05c92dba0a634e2ed71419834f363
 {
     public static $prefixLengthsPsr4 = array (
+        'c' => 
+        array (
+            'chillerlan\\Traits\\' => 18,
+            'chillerlan\\QRCode\\' => 18,
+        ),
         'P' => 
         array (
             'PHPMailer\\PHPMailer\\' => 20,
@@ -14,6 +19,14 @@ class ComposerStaticInit7ef05c92dba0a634e2ed71419834f363
     );
 
     public static $prefixDirsPsr4 = array (
+        'chillerlan\\Traits\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/chillerlan/php-traits/src',
+        ),
+        'chillerlan\\QRCode\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/chillerlan/php-qrcode/src',
+        ),
         'PHPMailer\\PHPMailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
