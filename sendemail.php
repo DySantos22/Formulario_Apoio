@@ -56,14 +56,14 @@ try {
   
     //Verificando envio do email
     if($mail->send()) {
-        header('refresh:4;url=index.html');
+        header('refresh:4;url=index.php');
     } else {
-        header('location: index.html');
+        header('location: index.php');
         }
 
 } catch (Exception $e) {
     echo "Mensagem não foi enviada. ERRO: {$mail->ErrorInfo}";   //Mensagem de erro, depois envia para o cadastro novamente
-    header('location: index.html');
+    header('location: index.php');
 }
 
 //Mandando os dados para o banco 
