@@ -18,7 +18,7 @@ if ($conn->query($sql2) === TRUE) {
   header('refresh:5;url=login.html');
 } else {
   echo "Erro: " . $conn->error;
-  header('refresh:0;url=index.html');
+  header('refresh:0;url=index.php');
 }
 
 //Fecha a conexão.
