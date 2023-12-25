@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Noto+Sans+JP:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+#logo{
+    margin: 0 2rem;
+}
+body{
+    background-color: #f7f5f5;
+}
+ /* Botoes */
+.div_buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 2rem;
+}
+
+.button_links{
+    height: 5rem;
+    width: 100%;
+    border:none;
+    font-size: 18px;
+    color: #fff;
+    margin-top:1rem;
+    border-radius: 5px;
+    font-family: 'Merriweather', serif;
+    box-shadow: 2px 2px 2px 1px rgba(27, 27, 27, 0.3);
+}
+
+#button1{
+    background-color:#5C5C5C;
+    
+}
+#button2{
+    background-color:#5C5C5C;
+    
+}
+#button3{
+    background-color:#5C5C5C;
+    
+}
+#button4{
+    background-color:#5C5C5C;
+    
+}
+
+.imgs-icons{
+    margin-right: 1rem;
+    width: 35px;
+    height: auto;
+}
+
+/* Formulario de pesquisa */
+.div-formulario{
+    margin-top: 3rem;
+    background-color:#404040;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 2px 1px rgba(27, 27, 27, 0.3);
+    border-radius: 5px;
+}
+
+.form{
+    width: 85%;
+}
+
+.barra-pesquisa{
+    margin-top: 1rem;
+}
+
+.informacoes{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    font-family: 'Merriweather', serif;
+}
+
+
+/* Tirando focus input */
+input:focus {
+    box-shadow: 0 0 0 0 !important; /* hide shadow */
+    outline: 0 !important; /* hide outline */
+    border: 1px solid gray !important; /* set border color */
+}

@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: #f7f5f5;
+}
+
+.container {
+    width: 100%;
+
+}
+
+#logo{
+    margin: 0 2rem;
+}
+
+.div-informacoes {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+.informacoes{
+    border-radius: 5px;
+    color: #fff !important;
+    font-family: 'Merriweather', serif;
+}
+
+#card1 {
+    width: 100%;
+    height: 5rem;
+    background-color: #5C5C5C;
+    box-shadow: 2px 2px 2px 1px rgba(27, 27, 27, 0.3);
+    border-radius: 5px;
+}
+
+#card2 {
+    width: 100%;
+    height: 5rem;
+    background-color: #5C5C5C;
+    box-shadow: 2px 2px 2px 1px rgba(27, 27, 27, 0.3);
+    border-radius: 5px;
+}
+
+#card3 {
+    width: 100%;
+    height: 5rem;
+    background-color: #5C5C5C;
+    margin-left: 0rem !important;
+    margin-top: -0rem;
+    box-shadow: 2px 2px 2px 1px rgba(27, 27, 27, 0.3);
+    border-radius: 5px;
+}
+
+.content{
+    margin-top: 4rem;
+}
+
+/* Tabela de CONTATOS */
+/* Estilos para a tabela DataTable */
+#listar_wrapper {
+    margin-top: 2rem;
+}
+
+/* Estilização do botão Pesquisar */
+#listar_filter input {
+    border: 1px solid #ccc;
+    padding: 6px;
+    border-radius: 4px;
+    margin: 0 1rem 1rem 0.5rem;
+}
+/* Remove a tarja preta de dentro do pesquisar */
+.dataTables_filter input {
+    outline: none;
+}
+#listar_length select {
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+#listar_paginate .paginate_button {
+    padding: 8px 15px;
+    margin: 0.5rem 0.5rem 0 0;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#listar_paginate .paginate_button.current {
+    background-color: #eeeaea;
+    color: #231323;
+    border: 1px solid #eeeaea;
+}
+
+#listar_paginate .paginate_button:hover {
+    background-color: #ccc;
+}
+#listar_info{
+    margin: 0 0 0 1rem;
+}
+
+#listar th,
+#listar td {
+    text-align: center;
+}
+
+#listar thead th {
+    background-color: #404040;
+    color: #fff;
+    
+}
+
+#listar tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#listar tbody tr:hover {
+    background-color: #f0f0f0;
+}
